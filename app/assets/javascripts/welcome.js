@@ -1,14 +1,23 @@
 $(document).on('ready', function(){
   evenOutSpacing();
-  var todo = $(".todo");
+  var tables = $(".main table");
 
-  $("tr", todo).draggable({
+  $("tr", tables).draggable({
       cancel: "button", // these elements won't initiate dragging
       revert: "invalid", // when not dropped, the item will revert back to its initial position
       containment: "document",
       helper: "clone", //makes item being dragged have visual clone
       cursor: "move"
   });
+
+    $("tr", doing).draggable({
+      cancel: "button", // these elements won't initiate dragging
+      revert: "invalid", // when not dropped, the item will revert back to its initial position
+      containment: "document",
+      helper: "clone", //makes item being dragged have visual clone
+      cursor: "move"
+  });
+
 
 });
 $(window).on('resize', evenOutSpacing);
