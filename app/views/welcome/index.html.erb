@@ -1,0 +1,11 @@
+<!-- <h1>Welcome#index</h1> -->
+<!-- <p>Find me in app/views/welcome/index.html.erb</p> -->
+<div class="main">
+  <table>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.text %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
