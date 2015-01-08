@@ -19,7 +19,9 @@ div.main{
   background: red;
 }
 
-div.left{
-  background: red;
+div.main table{
+  display: inline-block;
+  border: 1px solid black;
+  vertical-align: top;
 }
 
