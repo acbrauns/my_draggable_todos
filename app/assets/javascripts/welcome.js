@@ -8,14 +8,17 @@ function evenOutSpacing(){
 
   var tables = $(".main table");
   for (var i = 0; i < tables.length; i++){
-    $(tables[i]).css("width", thirdWidth - 5);
+    $(tables[i]).css("width", thirdWidth - 5); //subtract 5 for margins to avoid overflow
   }
 
   var windowHeight = $( window ).height();
   var mainHeight = $(".main").height();
-  var marginTop = (windowHeight - mainHeight) / 2;
-
-  $(".main").css("margin-top", marginTop);
+  //must make sure div is smaller than window
+  //otherwise adds negative top margin and won't scroll properly
+  if (windowHeight > mainHeight){
+    var marginTop = (windowHeight - mainHeight) / 2;
+    $(".main").css("margin-top", marginTop);
+  }
 }
 
 
