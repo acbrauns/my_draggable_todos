@@ -1,7 +1,11 @@
 <!-- <h1>Welcome#index</h1> -->
 <!-- <p>Find me in app/views/welcome/index.html.erb</p> -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
 <div class="main">
-  <table>
+  <table class="todo">
     <% @items.each do |item| %>
       <tr>
         <td><%= item.text %></td>
@@ -25,3 +29,4 @@
     <% end %>
   </table>
 </div>
+
