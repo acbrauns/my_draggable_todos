@@ -12,11 +12,12 @@ $(document).on('ready', function(){
   });
 
   doing.droppable({
-        accept: ".todo tbody tr",
+        accept: ".main tr",
         drop: function(event, ui){
-            event.preventDefault();
-            var cloned = (ui.draggable.clone());
-            $(".doing").append(cloned);        }
+          event.preventDefault();
+          var cloned = (ui.draggable.clone());
+          $(".doing").append(ui.draggable);
+        }
    });
 
 
