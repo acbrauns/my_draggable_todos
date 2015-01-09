@@ -6,11 +6,13 @@
 
 <div class="main">
   <table class="todo">
+    <tbody>
     <% @items.each do |item| %>
       <tr>
         <td><%= item.text %></td>
       </tr>
     <% end %>
+  </tbody>
   </table>
 
     <table class="doing">
