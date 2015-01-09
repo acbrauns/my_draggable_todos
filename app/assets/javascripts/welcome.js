@@ -1,7 +1,6 @@
 $(document).on('ready', function(){
   evenOutSpacing();
   var tables = $(".main table");
-  var doing = $(".doing");
 
   $("tr", tables).draggable({
       cancel: "button", // these elements won't initiate dragging
@@ -11,12 +10,11 @@ $(document).on('ready', function(){
       cursor: "move"
   });
 
-  doing.droppable({
+  tables.droppable({
         accept: ".main tr",
         drop: function(event, ui){
           event.preventDefault();
-          var cloned = (ui.draggable.clone());
-          $(".doing").append(ui.draggable);
+          $(this).append(ui.draggable);
         }
    });
 
