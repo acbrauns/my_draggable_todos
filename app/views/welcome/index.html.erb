@@ -6,29 +6,42 @@
 
 <div class="main">
   <table class="todo">
+    <thead>
+      <th>To Do</th>
+    </thead>
     <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.text %></td>
-      </tr>
-    <% end %>
-  </tbody>
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.text %></td>
+        </tr>
+      <% end %>
+    </tbody>
   </table>
 
-    <table class="doing">
-    <% 4.times do %>
-      <tr>
-        <td>meow</td>
-      </tr>
-    <% end %>
+  <table class="doing">
+    <thead>
+      <th>Doing</th>
+    </thead>
+    <tbody>
+      <% 4.times do %>
+        <tr>
+          <td>meow</td>
+        </tr>
+      <% end %>
+    </tbody>
   </table>
 
-    <table>
-    <% 2.times do %>
-      <tr>
-        <td>Sample</td>
-      </tr>
-    <% end %>
+    <table class="done">
+      <thead>
+        <th>Done</th>
+      </thead>
+      <tbody>
+        <% 2.times do %>
+          <tr>
+            <td>Sample</td>
+          </tr>
+        <% end %>
+      </tbody>
   </table>
 </div>
 

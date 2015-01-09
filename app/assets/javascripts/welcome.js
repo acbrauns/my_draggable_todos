@@ -2,7 +2,7 @@ $(document).on('ready', function(){
   evenOutSpacing();
   var tables = $(".main table");
 
-  $("tr", tables).draggable({
+  $("tbody tr", tables).draggable({
       cancel: "button", // these elements won't initiate dragging
       revert: "invalid", // when not dropped, the item will revert back to its initial position
       containment: "document",
@@ -11,15 +11,15 @@ $(document).on('ready', function(){
   });
 
   tables.droppable({
-        accept: ".main tr",
+        accept: ".main tbody tr",
         drop: function(event, ui){
           event.preventDefault();
           $(this).append(ui.draggable);
         }
    });
 
-
 });
+
 $(window).on('resize', evenOutSpacing);
 
 function evenOutSpacing(){
