@@ -31,7 +31,7 @@ function evenOutSpacing(){
   var thirdWidth = $(".main").width() / 3;
   var tables = $(".main table");
   for (var i = 0; i < tables.length; i++){
-    $(tables[i]).css("width", thirdWidth - 5); //subtract for margins to avoid overflow
+    $(tables[i]).css("width", thirdWidth - 20); //subtract for margins to avoid overflow
     $(tables[i]).css("min-height", windowHeight/2);
   }
 

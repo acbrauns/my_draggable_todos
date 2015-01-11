@@ -14,14 +14,26 @@
  *= require_self
  */
 
+ body{
+  color: #4D4D4D;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+ }
+
 div.main{
   height: auto;
-  background: red;
+  background: white;
+
 }
 
 div.main table{
   display: inline-block;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   vertical-align: top;
+  background: #E3E3E3;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+
 }
 
