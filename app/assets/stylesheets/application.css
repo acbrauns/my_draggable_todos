@@ -28,12 +28,18 @@ div.main{
 
 div.main table{
   display: inline-block;
-  /*border: 1px solid black;*/
+  /*position: relative;*/
   vertical-align: top;
   background: #E3E3E3;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 5px;
-
 }
+
+table, th, td {
+    border: 1px solid black;
+}
+
+
+
 
