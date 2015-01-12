@@ -15,10 +15,19 @@ $(document).on('ready', function(){
         drop: function(event, ui){
           event.preventDefault();
           $(this).append(ui.draggable);
-
+          item_id = ((ui.draggable).attr('id'));
+          console.log((ui.draggable).attr('id'));
+          //  PUT    /users/:user_id/items/:id(.:format)      items#update
+          $.ajax({
+            url: '/users/1/items/' + item_id,
+            type: 'PUT',
+            data: $(this).serialize()
+          }).done(function(response){
+            console.log("done");
+          });
           //logs id of table, corresponds to status of item
           var status = ($(this).attr('id'));
-          console.log(status);
+          // console.log(status);
         }
    });
 

@@ -12,7 +12,7 @@
     <tbody>
       <% @items.each do |item| %>
         <% if item.status == 0 %>
-          <tr>
+          <tr id="<%= item.id %>">
             <td>
               <p class="text"><%= item.text %></p>
                 <p class="icons">
@@ -33,7 +33,7 @@
     <tbody>
       <% @items.each do |item| %>
         <% if item.status == 1 %>
-          <tr>
+          <tr id="<%= item.id %>">
             <td>
               <p class="text"><%= item.text %></p>
                 <p class="icons">
@@ -54,7 +54,7 @@
       <tbody>
         <% @items.each do |item| %>
           <% if item.status == 2 %>
-            <tr>
+            <tr id="<%= item.id %>">
               <td>
                 <p class="text"><%= item.text %></p>
                   <p class="icons">
