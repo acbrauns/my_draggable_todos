@@ -7,8 +7,12 @@ class ItemsController < ApplicationController
   end
 
   def update
+    user = User.find(params['user_id'])
+    @item = user.items.find(params['id'])
     p "******************************************"
     p params
+    @item.update(status: params['status'])
+    p @item
   end
 end
 

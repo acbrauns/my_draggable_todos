@@ -14,20 +14,17 @@ $(document).on('ready', function(){
         accept: ".main tbody tr",
         drop: function(event, ui){
           event.preventDefault();
-          $(this).append(ui.draggable);
+          $(this).append(ui.draggable); //needs to be moved to ajax done function
           item_id = ((ui.draggable).attr('id'));
-          console.log((ui.draggable).attr('id'));
           //  PUT    /users/:user_id/items/:id(.:format)      items#update
+          var status = ($(this).attr('id'));
           $.ajax({
             url: '/users/1/items/' + item_id,
             type: 'PUT',
-            data: $(this).serialize()
+            data: {status: status}
           }).done(function(response){
             console.log("done");
           });
-          //logs id of table, corresponds to status of item
-          var status = ($(this).attr('id'));
-          // console.log(status);
         }
    });
 
