@@ -52,24 +52,22 @@ img{
 }
 
 td > * {
-  display: inline;
+  display: inline-block;
+  /*position: relative;*/
   vertical-align: middle;
   margin: 0;
 }
 
 td p{
-  float: left;
   /*border: 1px solid black;*/
-  vertical-align: bottom;
 }
 
 td .text{
   float: left;
-/*width: 83%;}*/
 }
 td .icons{
   float: right;
-  /*width: 15%;*/
+  text-align: right;
 }
 
 

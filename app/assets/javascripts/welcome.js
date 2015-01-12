@@ -1,4 +1,5 @@
 $(document).on('ready', function(){
+  // alert(windowWidth);
   evenOutSpacing();
   var tables = $(".main table");
 
@@ -33,6 +34,7 @@ $(document).on('ready', function(){
 $(window).on('resize', evenOutSpacing);
 
 function evenOutSpacing(){
+ var windowWidth = $(window).width();
 
   var windowHeight = $( window ).height();
   $(".main").css("min-height", windowHeight/2);
@@ -44,8 +46,17 @@ function evenOutSpacing(){
     $(tables[i]).css("width", thirdWidth - 25); //subtract for margins to avoid overflow
     $(tables[i]).css("min-height", windowHeight/2);
     $("tbody tr td, thead th", tables[i]).css("width", thirdWidth - 25);
-    $("p.icons", tables[i]).css("width", 60);
-    $("p.text", tables[i]).css("width", thirdWidth - 115);
+    if (windowWidth <= 655){
+      var currentWidthTbody = $("tbody", tables[i]).width();
+      // $("p.icons").css("width", currentWidthTbody - 25);
+      $("p.icons").css("margin-top", 3);
+      $("p.icons, p.text, thead th").css("width", currentWidthTbody -25);
+
+    }
+    else {
+      $("p.icons", tables[i]).css("width", 60);
+      $("p.text", tables[i]).css("width", thirdWidth - 115);
+    }
   }
 
   //need to calculate mainHeight AFTER even horizontal spacing of 3 tables
@@ -57,9 +68,12 @@ function evenOutSpacing(){
   //must make sure div is smaller than windowin tha
   //otherwise adds negative top margin and won't scroll properly
   if (windowHeight > mainHeight){
+    var topdivHeight = $(".top_div").height();
     var marginTop = (windowHeight - mainHeight) / 2;
-    $(".main").css("margin-top", marginTop);
+    $(".main").css("margin-top", marginTop - topdivHeight);
   }
+
+
 }
 
 
