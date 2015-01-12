@@ -34,6 +34,8 @@ function evenOutSpacing(){
     $(tables[i]).css("width", thirdWidth - 25); //subtract for margins to avoid overflow
     $(tables[i]).css("min-height", windowHeight/2);
     $("tbody tr td, thead th", tables[i]).css("width", thirdWidth - 25);
+    $("p.icons", tables[i]).css("width", 60);
+    $("p.text", tables[i]).css("width", thirdWidth - 115);
   }
 
   //need to calculate mainHeight AFTER even horizontal spacing of 3 tables
