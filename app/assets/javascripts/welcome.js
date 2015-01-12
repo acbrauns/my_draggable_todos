@@ -33,6 +33,7 @@ $(document).on('ready', function(){
 $(window).on('resize', evenOutSpacing);
 
 function evenOutSpacing(){
+  var windowWidth = $(window).width();
 
   var windowHeight = $( window ).height();
   $(".main").css("min-height", windowHeight/2);
@@ -46,6 +47,14 @@ function evenOutSpacing(){
     $("tbody tr td, thead th", tables[i]).css("width", thirdWidth - 25);
     $("p.icons", tables[i]).css("width", 60);
     $("p.text", tables[i]).css("width", thirdWidth - 115);
+    $("p.text", tables[i]).css("float", "left");
+    $("p.icons", tables[i]).css("float", "right");
+
+    if ($(window).width() < 655){
+      $("p.text, p.icons", tables[i]).css("float", "center");
+      parentWidth = $("p.text").parent().width();
+      $("p.text", tables[i]).width(parentWidth);
+    }
   }
 
   //need to calculate mainHeight AFTER even horizontal spacing of 3 tables
