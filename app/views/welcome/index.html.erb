@@ -1,68 +1,7 @@
 <!-- <h1>Welcome#index</h1> -->
 <!-- <p>Find me in app/views/welcome/index.html.erb</p> -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
-<div class="main">
-  <table class="todo">
-    <thead>
-      <th>To Do</th>
-    </thead>
-    <tbody>
-      <% @items.each do |item| %>
-        <tr>
-          <td>
-            <p class="text"><%= item.text %></p>
-              <p class="icons">
-                <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">
-                <img src="http://png-4.findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png">
-              </p>
-          </td>
-
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <table class="doing">
-    <thead>
-      <th>Doing</th>
-    </thead>
-    <tbody>
-      <% 4.times do %>
-        <tr>
-          <td>
-            <p class="text">Meow!</p>
-            <p class="icons">
-              <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">
-              <img src="http://png-4.findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png">
-            </p>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-    <table class="done">
-      <thead>
-        <th>Done</th>
-      </thead>
-      <tbody>
-        <% 2.times do %>
-          <tr>
-            <td>
-              <p class="text">Sample</p>
-                <p class="icons">
-                  <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/edit.png">
-                  <img src="http://png-4.findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png">
-                </p>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-  </table>
-</div>
 
 <!-- <img src="./assets/images/trash_icon.png"> -->
 <!-- <img src="http://png-4.findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png"> -->
