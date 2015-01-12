@@ -15,6 +15,10 @@ $(document).on('ready', function(){
         drop: function(event, ui){
           event.preventDefault();
           $(this).append(ui.draggable);
+
+          //logs id of table, corresponds to status of item
+          var status = ($(this).attr('id'));
+          console.log(status);
         }
    });
 
