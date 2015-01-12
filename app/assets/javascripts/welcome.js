@@ -33,14 +33,13 @@ $(document).on('ready', function(){
 $(window).on('resize', evenOutSpacing);
 
 function evenOutSpacing(){
+  var tables = $(".main table");
   var windowWidth = $(window).width();
-
   var windowHeight = $( window ).height();
   $(".main").css("min-height", windowHeight/2);
 
   //get width of window, divide by 3
   var thirdWidth = $(".main").width() / 3;
-  var tables = $(".main table");
   for (var i = 0; i < tables.length; i++){
     $(tables[i]).css("width", thirdWidth - 25); //subtract for margins to avoid overflow
     $(tables[i]).css("min-height", windowHeight/2);
@@ -69,6 +68,7 @@ function evenOutSpacing(){
     var marginTop = (windowHeight - mainHeight) / 2;
     $(".main").css("margin-top", marginTop);
   }
+
 }
 
 
