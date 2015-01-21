@@ -16,8 +16,8 @@
             <td>
               <p class="text"><%= item.text %></p>
                 <p class="icons">
-                   <img src="/images/edit_icon.png">
-                  <img src="/images/trash_icon.png">
+                  <img src="/images/edit_icon.png">
+                  <%= link_to image_tag("/images/trash_icon.png"), [@user, item], method: :delete %>
                 </p>
             </td>
           </tr>
@@ -38,7 +38,7 @@
               <p class="text"><%= item.text %></p>
                 <p class="icons">
                    <img src="/images/edit_icon.png">
-                  <img src="/images/trash_icon.png">
+                   <%= link_to image_tag("/images/trash_icon.png"), [@user, item], method: :delete %>
                 </p>
             </td>
           </tr>
@@ -59,7 +59,7 @@
                 <p class="text"><%= item.text %></p>
                   <p class="icons">
                      <img src="/images/edit_icon.png">
-                    <img src="/images/trash_icon.png">
+                     <%= link_to image_tag("/images/trash_icon.png"), [@user, item], method: :delete %>
                   </p>
               </td>
             </tr>
