@@ -11,7 +11,6 @@ require 'faker'
   # item = Item.create({text: "Hello"})
 
 user = User.find(1)
-
 10.times do |i|
   user.items.create({
     :text => Faker::Lorem.sentence
